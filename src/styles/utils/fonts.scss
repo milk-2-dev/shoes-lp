@@ -1,0 +1,14 @@
+// Файл для подключения нестандартных шрифтов
+
+@font-face {
+  font-family: 'Druk Text Wide Cy';
+  src: url('../fonts/DrukTextWideCy-Medium.eot');
+  src: url('../fonts/DrukTextWideCy-Medium.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/DrukTextWideCy-Medium.woff2') format('woff2'),
+    url('../fonts/DrukTextWideCy-Medium.woff') format('woff'),
+    url('../fonts/DrukTextWideCy-Medium.ttf') format('truetype'),
+    url('../fonts/sDrukTextWideCy-Medium.svg#DrukTextWideCy-Medium') format('svg');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}

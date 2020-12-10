@@ -1,0 +1,60 @@
+@import "../utils/variables";
+
+@mixin media-tablet {
+
+  @media (min-width: $mediaWidthTablet) {
+    @content;
+  }
+}
+
+@mixin media-tablet2 {
+
+  @media (min-width: $mediaWidthTablet2) {
+    @content;
+  }
+}
+
+@mixin media-tablet-horizontal {
+
+  @media (min-width: $mediaWidthTabletHorizontal) {
+    @content;
+  }
+}
+
+@mixin media-laptop {
+
+  @media (min-width: $mediaWidthLaptop) {
+    @content;
+  }
+}
+
+@mixin media-custom($width) {
+
+  @media (min-width: $width) {
+    @content;
+  }
+}
+
+@media screen and (max-width: 1200px) { //hd
+  html {
+    font-size: $body-font-size - 2px;
+  }
+}
+
+@media screen and (max-width: 992px) { //laptop
+  html {
+    font-size: $body-font-size - 4px;
+  }
+}
+
+@media screen and (max-width: 768px) { //tablets
+  html {
+    font-size: $body-font-size - 6px;
+  }
+}
+
+@media screen and (max-width: 480px) { //phones
+  html {
+    font-size: $body-font-size - 8px;
+  }
+}

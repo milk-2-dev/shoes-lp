@@ -1,0 +1,86 @@
+$body-font-size: 14px;
+
+@import "utils/fonts";
+
+@import "utils/buttons";
+
+@import "utils/form";
+
+@import "common/global";
+
+@import "common/header";
+
+@import "common/main";
+
+@import "common/footer";
+
+.my-sizer-element {
+  width: 8.33333%;
+}
+
+.gallery-column {
+  position: relative;
+  float: left;
+  min-height: 1px;
+  width: 25%;
+  padding-left: 4px;
+  padding-right: 4px;
+  margin-top: 8px;
+}
+
+#countdown {
+  color: #fff;
+  text-align: center;
+
+  li {
+    display: inline-block;
+    font-size: 1.5em;
+    list-style-type: none;
+    padding: 1em;
+    text-transform: uppercase;
+  }
+
+  li span {
+    display: block;
+    font-size: 4.5rem;
+    margin-bottom: 35px;
+  }
+
+  .message {
+    font-size: 4rem;
+  }
+
+  #content {
+    display: none;
+    padding: 1rem;
+  }
+
+  .emoji {
+    padding: 0 .25rem;
+  }
+
+  @media all and (max-width: 768px) {
+    h1 {
+      font-size: 1.5rem;
+    }
+
+    li {
+      font-size: 1.125rem;
+      padding: .75rem;
+    }
+
+    li span {
+      font-size: 3.375rem;
+    }
+  }
+}
+
+.call-to-action {
+  text-align: center;
+  font-size: 56px;
+  letter-spacing: 6px;
+  color: #e4003f;
+  margin: 50px 0;
+  text-transform: uppercase;
+  line-height: 1.3;
+}
