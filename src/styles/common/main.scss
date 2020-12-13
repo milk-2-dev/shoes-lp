@@ -279,20 +279,19 @@ h2 {
   justify-content: center;
   height: 572px;
   background: #0d0d0d;
+  background: url("../images/main_bg.jpg");
+  background-repeat: repeat;
 
   &.custom-bg {
     position: relative;
 
     .block-bg {
-      background: url("../images/header_bg.jpg");
-      background-size: cover;
-      background-position: left center;
-      background-repeat: no-repeat;
       position: absolute;
-      left: 50%;
+      left: 0;
       top: 0;
-      width: 50%;
+      width: 100%;
       height: 100%;
+      background: #00000091;
     }
   }
 
@@ -301,7 +300,7 @@ h2 {
 
     .wrapper {
       display: flex;
-      justify-content: space-between;
+      // justify-content: space-between;
       align-items: center;
       height: 100%;
     }
@@ -310,6 +309,20 @@ h2 {
       width: 480px;
       text-transform: uppercase;
       text-align: center;
+      padding: 50px;
+      background: #614069;
+    }
+
+    .info_range {
+      color: #fff;
+      font-size: 40px;
+      margin-left: 150px;
+      font-weight: 600;
+      line-height: 1.5;
+
+      ul {
+        list-style: disc;
+      }
     }
   }
 }
@@ -377,11 +390,11 @@ h2 {
 
 .benefits_section {
   padding: 40px 0 10px;
-  background: url("../images/benefits_bg.jpg") center 130px no-repeat;
-  -webkit-background-size: 280px auto;
-  -moz-background-size: 280px auto;
-  -o-background-size: 280px auto;
-  background-size: 280px auto;
+  // background: url("../images/benefits_bg.jpg") center 130px no-repeat;
+  // -webkit-background-size: 280px auto;
+  // -moz-background-size: 280px auto;
+  // -o-background-size: 280px auto;
+  // background-size: 280px auto;
 }
 
 .benefits_section h2 {
@@ -390,17 +403,17 @@ h2 {
 
 .benefits_section .benefit_item {
   float: left;
-  margin: 0 0 30px 340px;
+  margin: 0 0 30px;
   padding: 0 0 0 95px;
-  width: 300px;
+  width: 50%;
   position: relative;
 }
 
-.benefits_section .benefit_item:nth-child(odd) {
-  margin: 0 0 30px;
-  padding: 0 95px 0 0;
-  text-align: right;
-}
+// .benefits_section .benefit_item:nth-child(odd) {
+//   margin: 0 0 30px;
+//   padding: 0 0 0 95px;
+//   text-align: right;
+// }
 
 .benefits_section .benefit_item img {
   display: block;
@@ -415,10 +428,10 @@ h2 {
   left: 0;
 }
 
-.benefits_section .benefit_item:nth-child(odd) img {
-  left: auto;
-  right: 0;
-}
+// .benefits_section .benefit_item:nth-child(odd) img {
+//   left: auto;
+//   right: 0;
+// }
 
 .benefits_section {
   .benefit_item {
@@ -871,6 +884,144 @@ h2 {
   border-radius: 4px 0 0 4px;
 }
 
+/* consultation */
+
+#consultation {
+  background: #ff655d;
+  color: #fff;
+  font-size: 18px;
+  position: relative;
+  padding: 80px 0;
+
+  .content-block {
+    display: flex;
+    justify-content: space-between;
+
+    .left-part {
+      width: 40%;
+      margin-right: 30px;
+
+      h2 {
+        margin: 0;
+        font-weight: 300;
+        font-size: 30px;
+        text-align: left;
+      }
+    }
+
+    .right-part {
+      width: 60%;
+
+      .text {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  .btn {
+    background: none;
+    color: #ffffff;
+    border: 1px solid#ffffff;
+    font-size: 14px;
+    transition: 0.3s all;
+    padding: 10px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+
+    &:focus,
+    &:hover {
+      color: #333;
+      border: 1px solid #fff;
+      background: #fff;
+    }
+  }
+}
+
+/* sizes-table */
+#sizes-table {
+  padding: 40px 0;
+
+  h2 {
+    margin-bottom: 40px;
+
+    &:before,
+    &:after {
+      display: inline-block;
+      vertical-align: middle;
+      content: '';
+      margin: -8px 25px 0;
+      width: 240px;
+      height: 2px;
+      border-top: 1px solid #dddbdc;
+      border-bottom: 1px solid #dddbdc;
+    }
+  }
+
+  .content-block {
+    display: flex;
+    justify-content: space-between;
+
+    .left-part {
+      margin-right: 50px;
+      width: 40%;
+
+      .steps {
+        display: flex;
+
+        .step-item {
+          margin-right: 16px;
+          width: 165px;
+
+          img {
+            margin-bottom: 16px;
+          }
+
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+
+    .right-part {
+      width: 60%;
+
+      .table {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 30px;
+
+        .row {
+          display: flex;
+          border-bottom: 1px solid #cccccc;
+
+          &:last-child {
+            border-bottom: none;
+          }
+
+          p {
+            padding: 10px;
+            min-width: 70px;
+            border-right: 1px solid #cccccc;
+            text-align: center;
+
+            &:first-child {
+              min-width: 100px;
+              background: #e8e8e8;
+            }
+
+            &:last-child {
+              border-right: none;
+            }
+          }
+        }
+
+        .top-b {}
+      }
+    }
+  }
+}
+
 /* order */
 
 .order_section .title_block {
@@ -888,16 +1039,15 @@ h2 {
 }
 
 .order_section .content_block {
-  height: 600px;
   background: #0d0d0d;
-  // background: #0d0d0d url(../images/desctop__order_bg.jpg) center top no-repeat;
+  padding: 40px 0;
 }
 
 .order_section .content_block .info_block {
   // margin: 0 0 0 470px;
   padding: 36px 0 0;
 
-  h4{
+  h4 {
     font-size: 35px;
     line-height: 36px;
     letter-spacing: 6px;
@@ -1026,19 +1176,16 @@ h2 {
   margin: 0 auto;
   width: 300px;
   height: 70px;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
   border-radius: 4px;
   background: #d6af28;
-  font-family: 'MuseoSansCyrl', sans-serif;
-  font-weight: 300;
   font-size: 20px;
   line-height: 70px;
   letter-spacing: 1px;
   color: #222;
-  text-transform: uppercase;
-  cursor: pointer;
+  text-decoration: none;
   position: relative;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .order_section .content_block .button:hover {
@@ -1085,19 +1232,19 @@ h2 {
   //   background-image: url(../images/tablet__header_bg.jpg);
   // }
 
-  .header_section.custom-bg .block-bg{
+  .header_section.custom-bg .block-bg {
     display: none;
   }
 
-  .header_section .content_block .wrapper{
+  .header_section .content_block .wrapper {
     justify-content: center;
   }
 
-  .benefits_section .benefit_item{
+  .benefits_section .benefit_item {
     padding: 0;
 
-    &:nth-child(odd){
-    padding: 0;
+    &:nth-child(odd) {
+      padding: 0;
     }
   }
 
@@ -1195,9 +1342,7 @@ h2 {
     letter-spacing: 4px;
   }
 
-  .order_section .content_block {
-
-  }
+  .order_section .content_block {}
 
   .order_section .content_block .info_block {
     // margin: 0 0 0 320px;
@@ -1271,7 +1416,6 @@ h2 {
   .benefits_section .benefit_item:nth-child(odd) {
     margin: 0 0 20px;
     padding: 0 0 0 95px;
-    text-align: left;
   }
 
   .benefits_section .benefit_item:nth-child(odd) img {
@@ -1374,4 +1518,10 @@ h2 {
     margin: 0;
     // padding: 352px 0 40px;
   }
+}
+
+.small{
+  font-size: 14px;
+  display: block;
+  color: #898989;
 }
