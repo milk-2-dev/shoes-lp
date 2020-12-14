@@ -4,6 +4,9 @@ global.jQuery = $;
 global.$ = $;
 
 import 'slick-carousel';
+import '@fancyapps/fancybox';
+
+import Inputmask from "inputmask";
 
 // import Shuffle from 'shufflejs';
 
@@ -35,9 +38,59 @@ function countDown() {
     }, 1000)
 }
 
+const initScrollToLink = () => {
+  $(".anchor").on("click", function (event) {
+    event.preventDefault();
+
+    var name = $(this).attr('href'),
+      top = $(name).offset().top;
+
+    top = +top;
+    $('body,html').animate({
+      scrollTop: top
+    }, 1500);
+  });
+}
+
+const calcOldPrice = () => {
+  const allElements = $(".price_item.new").get()
+
+  allElements.forEach(item => {
+    const itemPrice = $(item).text().split(' ')[0]
+
+    const oldPrice = Math.round(+itemPrice * 100 / (100 - 30))
+
+    $(item).parent().find(".price_item.old").text(`${oldPrice} грн`)
+  })
+}
+
+const initOrderModal = () => {
+  $(".product_item .button").on('click', function (event) {
+    const $button = $(event.currentTarget)
+
+    const $modalOrderProduct = $(".modal-order-form")
+    // $modalOrderProduct.html('')
+    $modalOrderProduct.find(".product-img").html('').append($($button.parent().find(".slider-item")[0]).clone())
+    $modalOrderProduct.find(".product-info").html('').append($button.parent().find(".title_block").clone())
+    $modalOrderProduct.find(".product-info").append($button.parent().find(".price_item.new").clone())
+
+
+    $.fancybox.open({
+      src: '#hidden-content',
+      type: 'inline',
+      opts: {
+        afterShow: function (instance, current) {
+          console.info('done!');
+        }
+      }
+    });
+  });
+}
+
 
 $(document).ready(function () {
   $('.catalog_section .slider').slick();
+
   $('.reviews_section .slider').slick({
     slidesToShow: 3,
     slidesToScroll: 1,
@@ -64,4 +117,12 @@ $(document).ready(function () {
   // });
 
   countDown()
+  initScrollToLink()
+  calcOldPrice()
+  initOrderModal()
+
+  const input = $("input[name='tel']")[0]
+
+  var im = new Inputmask("+38(099) 999-9999");
+  im.mask(input);
 });

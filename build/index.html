@@ -24,7 +24,7 @@
           <h4>Распродажа женской обуви</h4>
           <div class="discount">-30%</div>
           <p>на весь ассортимент</p>
-          <a href="index/0395/#catalog" class="button">Перейти в каталог</a>
+          <a href="#catalog" class="anchor button">Перейти в каталог</a>
         </div>
         <div class="info_range">
           <ul>
@@ -60,8 +60,9 @@
 
         <div class="benefit_item">
           <div class="benefit_wrapper">
-            <p><span>Гарантия</span> Вы можете вернуть обувь и получить ваши деньги обратно. <b class="small">*Обувь должна быть в
-              оригинальной упаковке и без следов использования</b></p>
+            <p><span>Гарантия</span> Вы можете вернуть обувь и получить ваши деньги обратно. <b class="small">*Обувь
+                должна быть в
+                оригинальной упаковке и без следов использования</b></p>
           </div>
         </div>
         <div class="benefit_item">
@@ -94,14 +95,13 @@
             <div class="slider-item"><img src="images/products/black_4.jpg" alt="Угги" title="Угги"></div>
             <div class="slider-item"><img src="images/products/black_5.jpg" alt="Угги" title="Угги"></div>
             <div class="slider-item"><img src="images/products/black_6.jpg" alt="Угги" title="Угги"></div>
-
           </div>
           <div class="discount">-30%</div>
           <div class="title_block">
             <h4>Луноходы черные</h4>
           </div>
           <div class="price_block clearfix">
-            <div class="price_item old">1020 грн</div>
+            <div class="price_item old"></div>
             <div class="price_item new">480 грн</div>
           </div>
           <div class="description">
@@ -111,7 +111,7 @@
               <li><span>Высота подошвы:</span>1,5 см</li>
             </ul>
           </div>
-          <div class="list_block sizes_block">
+          <!-- <div class="list_block sizes_block">
             <p>Размеры в наличии</p>
             <ul>
               <li>35</li>
@@ -121,10 +121,9 @@
               <li>39</li>
               <li>40</li>
               <li>41</li>
-              <li>42</li>
             </ul>
-          </div>
-          <a href="index/0395/#order_form" class="button">Выбрать</a>
+          </div> -->
+          <button class="button">Заказать</button>
         </div>
         <div class="product_item">
           <div class="slider">
@@ -140,7 +139,7 @@
             <h4>Луноходы золотые</h4>
           </div>
           <div class="price_block clearfix">
-            <div class="price_item old">1149 грн</div>
+            <div class="price_item old"></div>
             <div class="price_item new">540 грн</div>
           </div>
           <div class="description">
@@ -150,7 +149,7 @@
               <li><span>Высота подошвы:</span>1,5 см</li>
             </ul>
           </div>
-          <div class="list_block sizes_block">
+          <!-- <div class="list_block sizes_block">
             <p>Размеры в наличии</p>
             <ul>
               <li>35</li>
@@ -160,10 +159,9 @@
               <li>39</li>
               <li>40</li>
               <li>41</li>
-              <li>42</li>
             </ul>
-          </div>
-          <a href="index/0395/#order_form" class="button">Выбрать</a>
+          </div> -->
+          <button class="button">Заказать</button>
         </div>
       </div>
     </div>
@@ -291,7 +289,7 @@
           <div class="table">
             <div class="row">
               <p>ЕВРО</p>
-    
+
               <p>36</p>
               <p>37</p>
               <p>38</p>
@@ -310,7 +308,7 @@
               <p>27</p>
             </div>
           </div>
-          
+
           <p class="alert">
             <b>Внимание:</b> Если длина стопы 27,5 см, нужно округлять в большую сторону, до 28 см! Ваш размер 42
           </p>
@@ -338,14 +336,40 @@
           <div class="separator"></div>
 
           <p class="call-to-action">Закажите сейчас и получите скидку 30%</p>
-          <a href="index/0395/#catalog" class="button">Перейти в каталог</a>
+          <a href="#catalog" class="anchor button">Перейти в каталог</a>
         </div>
       </div>
     </div>
   </section>
 
   <!-- /order -->
+  <div style="display: none;" id="hidden-content" class="modal-order-form">
+    <h2>Заполните форму, что бы отправить заказ</h2>
 
+    <div class="content">
+      <div class="left-part">
+        <div class="order-product">
+          <div class="product-img"></div>
+        </div>
+      </div>
+      <div class="right-part">
+        <div class="product-info"></div>
+
+        <div class="form">
+          <div class="form-item">
+            <label>Имя:</lable>
+              <input type="text" name="userName" class="form-control">
+          </div>
+          <div class="form-item">
+            <label>Номер телефона:</lable>
+              <input type="text" name="tel" class="form-control">
+          </div>
+
+          <div class="button-section"><button class="button">Отправить заказ</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
 
 </body>
 

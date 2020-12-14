@@ -62,7 +62,9 @@
     "webpack-stream": "^5.2.1"
   },
   "dependencies": {
+    "@fancyapps/fancybox": "^3.5.7",
     "flipdown": "^0.3.2",
+    "inputmask": "^5.0.5",
     "jquery": "^3.5.1",
     "normalize.css": "^8.0.1",
     "shufflejs": "^5.2.3",

@@ -1520,8 +1520,133 @@ h2 {
   }
 }
 
-.small{
+.small {
   font-size: 14px;
   display: block;
   color: #898989;
+}
+
+.modal-order-form {
+  max-width: 600px;
+
+  h2 {
+    text-align: left;
+    margin-bottom: 30px;
+  }
+
+  .content {
+    display: flex;
+
+    .left-part {
+      width: 50%;
+      margin-right: 50px;
+
+      .order-product {
+        display: flex;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+
+        .product-img {
+          .slider-item {
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+          }
+        }
+      }
+    }
+
+    .right-part {
+      width: 50%;
+
+      .product-info {
+        margin-bottom: 25px;
+
+        .title_block {
+          margin-bottom: 16px;
+
+          h4 {
+            font-weight: 700;
+            text-align: center;
+          }
+        }
+
+        .price_item {
+          &.new {
+            font-size: 24px;
+            text-align: center;
+            font-weight: 700;
+          }
+        }
+      }
+
+      .form {
+        max-width: 300px;
+
+        .form-item {
+          margin-bottom: 15px;
+          text-align: left;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+
+          label {
+            font-size: 16px;
+            line-height: 20px;
+            color: #7E7F81;
+            display: block;
+            font-weight: 500;
+            margin-bottom: 6px;
+          }
+
+          .form-control {
+            color: #494949;
+            font-size: 16px;
+            line-height: 20px;
+            border: 1px solid #8692a6;
+            box-sizing: border-box;
+            border-radius: 6px;
+            outline: 0;
+            padding: 10px;
+            width: 100%;
+            display: block;
+
+            &:active,
+            &:focus {
+              background: #fff;
+              border: 1px solid #005e43;
+              box-sizing: border-box;
+              box-shadow: 0 4px 10px 3px rgba(0, 94, 67, .11);
+              border-radius: 6px;
+            }
+          }
+        }
+
+        .button-section {
+          margin-top: 30px;
+
+          .button {
+            display: block;
+            margin: 0 auto;
+            width: 246px;
+            height: 56px;
+            border-radius: 4px;
+            background: #329fb6;
+            font-size: 20px;
+            line-height: 56px;
+            letter-spacing: 1px;
+            color: #fff;
+            text-transform: uppercase;
+            text-decoration: none;
+            text-align: center;
+            position: relative;
+          }
+        }
+      }
+    }
+  }
 }
