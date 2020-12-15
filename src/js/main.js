@@ -80,10 +80,27 @@ const initOrderModal = () => {
       type: 'inline',
       opts: {
         afterShow: function (instance, current) {
-          console.info('done!');
+          // console.info('done!');
         }
       }
     });
+  });
+}
+
+const sendOrder = (orderData) => {
+  $.ajax({
+    method: "POST",
+    url: `./send_order.php`,
+    data: JSON.stringify(orderData),
+    contentType: "application/json",
+    beforeSend: function () {
+    },
+    success: function (data) {
+
+    },
+    error: function (error) {
+      console.log('')
+    }
   });
 }
 
@@ -125,4 +142,23 @@ $(document).ready(function () {
 
   var im = new Inputmask("+38(099) 999-9999");
   im.mask(input);
+
+  $("#orderBtn").on("click", event => {
+    const orderData = {}
+
+    if ($("[name='userName']").val() !== '') {
+      if ($("[name='tel']").val() !== '') {
+        orderData["product"] = $(".modal-order-form .title_block h4").text()
+        orderData["price"] = $(".modal-order-form .price_item.new").text()
+        orderData["userName"] = $("[name='userName']").val()
+        orderData["tel"] = $("[name='tel']").val()
+
+        sendOrder(orderData)
+      } else {
+        $.fancybox.open('<div class="message"><h2>Заполните номер телефона</h2></p></div>');
+      }
+    } else {
+      $.fancybox.open('<div class="message"><h2>Заполните имя</h2></p></div>');
+    }
+  })
 });
